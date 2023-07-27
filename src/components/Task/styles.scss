@@ -1,0 +1,31 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  align-items: center;
+  height: 55px;
+  padding: 10px;
+  border-radius: 5px;
+
+  &__text {
+    width: 685px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__buttons {
+    display: flex;
+    gap: 8px;
+    padding-left: 15px;
+    border-left: 1px solid #000000;
+  }
+  &__button {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
