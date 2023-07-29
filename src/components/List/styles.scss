@@ -1,50 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import '../variables';
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #35334c;
+  color: $white;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  background: $blue;
+  box-shadow: -600px 0 400px 0px $blue-dark inset;
+  animation: background 6s infinite alternate;
 }
+@keyframes background {
+  50% {
+    background: $blue-dark;
+    box-shadow: -600px 0 400px 0px $blue inset;
+  }
+}
+
 .container {
   margin: 0 auto;
   padding-top: 200px;
   flex: 1 1 auto;
 }
 .list {
-  width: 900px;
-  padding: 10px;
+  width: 920px;
+  padding: 20px 20px;
+  border: 2px solid $violet;
   border-radius: 10px;
-  background-color: #d4bcdc;
+  background-color: $violet-dark;
 
   &__title {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   &__items {
     margin: 0 auto;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   &__button {
     display: flex;
     font-size: 16px;
     align-items: center;
     margin-left: auto;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid;
     border-radius: 5px;
-    border-color: #f4a03c;
-  }
-}
+    border-color: $white;
+    opacity: 0.7;
 
-.footer {
-  padding: 15px 0;
-  min-width: 900px;
-  background-color: coral;
+    transition: opacity 0.2s ease-in;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 }
