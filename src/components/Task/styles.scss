@@ -6,8 +6,12 @@
   align-items: center;
   height: 55px;
   padding: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
 
+  &:last-child {
+    margin-bottom: 30px;
+  }
   &__text {
     width: 685px;
     white-space: nowrap;

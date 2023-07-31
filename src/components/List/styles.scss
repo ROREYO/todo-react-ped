@@ -12,19 +12,19 @@ body {
   min-height: 100vh;
 
   background: $blue;
-  box-shadow: -600px 0 400px 0px $blue-dark inset;
-  animation: background 6s infinite alternate;
+  box-shadow: -800px 0 400px 0px $blue-dark inset;
+  animation: background 7s infinite alternate;
 }
 @keyframes background {
   50% {
     background: $blue-dark;
-    box-shadow: -600px 0 400px 0px $blue inset;
+    box-shadow: -800px 0 400px 0px $blue inset;
   }
 }
 
 .container {
   margin: 0 auto;
-  padding-top: 200px;
+  padding: 100px 0;
   flex: 1 1 auto;
 }
 .list {
