@@ -6,6 +6,7 @@ import './styles.scss';
 
 const AddTask = ({ onClickAddTask }) => {
   const [valueTask, setValueTask] = React.useState('');
+  const inputRef = React.useRef()
 
   const onSubmitAddTask = (event) => {
     event.preventDefault();
@@ -16,10 +17,12 @@ const AddTask = ({ onClickAddTask }) => {
 
     onClickAddTask(valueTask.replace(/\s+/g, ' ').replace(/^\s|\s$/g, ''));
     setValueTask('');
+    inputRef.current.focus()
   };
   return (
     <form className="task__add" onSubmit={onSubmitAddTask}>
       <input
+        ref={inputRef}
         type="text"
         className="task__add--input"
         placeholder="What task do you want add?"

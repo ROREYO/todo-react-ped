@@ -14,12 +14,14 @@
   }
   &__text {
     width: 685px;
+    font-size: 17px;
+    font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     transform: translate(0px, 10px);
 
-    padding: 0px 10px 15px 10px;
+    padding: 0px 10px 10px 10px;
     border-bottom: 4px solid;
     border-image: linear-gradient(to right, $blue, $blue-dark) 1 0%;
   }
@@ -48,4 +50,9 @@
 
     transition: all 0.2s ease-in;
   }
+}
+
+.done {
+  color: rgba(255, 255, 255, 0.185);
+
 }

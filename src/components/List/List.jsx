@@ -6,6 +6,7 @@ import Task from '../Task';
 import Footer from '../Footer';
 
 import './styles.scss';
+import NoTask from '../NoTask';
 
 uuidv4();
 
@@ -15,6 +16,10 @@ const List = () => {
   const onClickAddTask = (todo) => {
     setTasks([...tasks, { id: uuidv4(), task: todo, isComplited: false, isEditing: false }]);
   };
+  const onClickClearTasks = () => {
+    setTasks([])
+  }
+ 
   return (
     <div className="wrapper">
       <div className="container">
@@ -25,14 +30,16 @@ const List = () => {
           </div>
           <h2 className="list__title">YOUR TASKS</h2>
           <ul className="list__items">
-            {tasks.length === 0 && <div>test</div>}
+            {tasks.length === 0 && 
+              <NoTask />
+            }
             {tasks.map((task, index) => (
               <Task todo={task} key={index} />
             ))}
           </ul>
           {tasks.length >= 2 && (
             <div>
-              <button className="list__button">CLEAR TASKS</button>
+              <button className="list__button" onClick={onClickClearTasks}>CLEAR TASKS</button>
             </div>
           )}
         </div>
